@@ -1,0 +1,33 @@
+{{ define "navbar" }}
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="/static/embalses-logo-no-background.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" />
+      embalses
+    </a>
+
+    <div class="d-flex justify-items-right text-white">
+      <i class="bi bi-geo-alt mx-2" data-bs-toggle="modal" data-bs-target="#locationModal" style="font-size: 1.5rem"></i>
+
+      <div>
+        <i class="bi bi-gear-wide-connected mx-3 dropdown-item" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1.5rem"></i>
+        <ul class="dropdown-menu dropdown-menu-end mx-4">
+          <li><h6 class="dropdown-header">Aspecto (En progreso...)</h6></li>
+          <li>
+            <button class="dropdown-item disabled" type="button">
+              <i class="bi bi-brightness-high-fill mx-1"></i>
+              Claro
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item disabled" type="button">
+              <i class="bi bi-moon-fill mx-1"></i>
+              Oscuro
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+{{ end }}

@@ -1,0 +1,25 @@
+<br />
+<div class="row d-flex align-items-stretch gy-4 mx-4 my-5 mw-100">
+  {{ range . }}
+  <div class="col-12 col-lg-6 col-xxl-4">
+    <div class="h-100 shadow p-3 bg-white rounded">
+      <div class="card-body">
+        <h5 class="card-header d-flex justify-content-between">
+          <strong>{{ .Nombre }}</strong>
+          <div>
+            <span class="badge rounded-pill bg-success">
+              <i class="bi bi-geo"></i>
+              {{ printf "%.2f" .DistanceFromLocation }} km
+            </span>
+          </div>
+        </h5>
+
+        <hr />
+        <div><strong>Ubicación: </strong> {{ .Provincia}}, {{ .CCAA }}</div>
+        <div><strong>Demarcación: </strong> {{ .Demarcacion }}</div>
+        <div class="text-truncate"><strong>Tipo: </strong> {{ .Tipo }}</div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>

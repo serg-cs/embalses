@@ -1,0 +1,22 @@
+body {
+  font-family: "Arial", sans-serif;
+  height: 100vh;
+  background-color: #00afef;
+}
+
+.navbar-brand {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 200%;
+}
+
+.spinner {
+  display: none;
+}
+.htmx-request .spinner {
+  display: flex;
+}
+.htmx-request.spinner {
+  display: flex;
+}
