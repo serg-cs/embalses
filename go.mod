@@ -1,4 +1,4 @@
-module embalses.serg-cs.com
+module github.com/serg-cs/embalses
 
 go 1.23.2
 
