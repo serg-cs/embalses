@@ -15,11 +15,11 @@ Along the way, I plan to learn new technologies and explore areas outside of wha
 * JavaScript
 * CSS
 * SQL
-* Postgres database (although it should be adaptable to others)
+* PostgreSQL database
 
 ## Use
 
-- A server with a running database server is required (I used a local Postgres running on my machine).
+- A server with a running PostgreSQL database server is required (I used a local Postgres running on my machine).
 - The original data files are stored in the `originalDataFiles` directory of the project. NOTE: the file names are expected as originally provided.
 - When running, you must pass some parameters in the command line as explained below.
 - All necessary files are prepared with `go:embed` to form part of the Golang executable if compiled, except original data files which may not be used as given or be stored elsewhere.
@@ -27,12 +27,20 @@ Along the way, I plan to learn new technologies and explore areas outside of wha
 ## Command line
 
 * **[host]** by default is "localhost"
-* **[port]** where the database host is running (5432 is the default for Postgres)
+* **[port]** where the database host is running (5432 is the default for PostgreSQL)
 * **dbname** the name of a running database on the host server is required
 * **user** the username to access the database
 * **[password]** password for the given user if required
 * **[load-data]** by default false, but the ***first time it is required***, this prepares the database from the data files in the provided data-dir path
 * **[data-dir]** directory where data files are stored. Only required when load-data is active. NOTE: can be absolute or relative path
 
-Example command could be:
-```go run *.go -dbname embalses -user serg-cs -data-dir originalDataFiles```
+## Installation
+You can install the program using [Go](https://go.dev) with the following command:
+
+```go install github.com/serg-cs/embalses@latest```
+
+And then using the command embalses with the corresponding flags. An example could be:
+
+```embalses -dbname embalses -user serg-cs -data-dir pathToDataFilesDirectory -load-data```
+
+NOTE: If you wish to use the original data files you must download them from the repository separately and change `pathToDataFilesDirectory` to the path where your data files are stored. 
